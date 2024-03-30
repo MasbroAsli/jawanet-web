@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Login dengan Cookie</title>
+  </head>
+  <body>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Username:</label><br />
+      <input type="text" id="username" name="username" /><br />
+      <label for="password">Password:</label><br />
+      <input type="password" id="password" name="password" /><br /><br />
+      <button type="submit">Login</button>
+    </form>
+
+    <script>
+      function setCookie(name, value, minutes) {
+        var now = new Date();
+        var time = now.getTime();
+        time += minutes * 60 * 1000; // menambahkan menit ke waktu saat ini
+        now.setTime(time);
+        document.cookie =
+          name + "=" + value + ";expires=" + now.toUTCString() + ";path=/";
+      }
+
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i];
+          while (cookie.charAt(0) == " ")
+            cookie = cookie.substring(1, cookie.length);
+          if (cookie.indexOf(nameEQ) == 0)
+            return cookie.substring(nameEQ.length, cookie.length);
+        }
+        return null;
+      }
+
+      function login() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Simpan data login dalam cookie
+        setCookie("username", username, 1); // 30 menit
+
+        // Redirect atau lakukan operasi setelah login berhasil
+        window.location.href = "../index.html";
+      }
+
+      // Periksa apakah pengguna sudah login
+      window.onload = function () {
+        var username = getCookie("username");
+        if (username !== null && username !== "") {
+          // Pengguna masih dalam sesi login yang valid, redirect ke halaman utama
+          window.location.href = "../index.html";
+        }
+      };
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Mencegah form dari submit default
+
+          // Panggil fungsi login saat form disubmit
+          login();
+        });
+    </script>
+  </body>
+</html>

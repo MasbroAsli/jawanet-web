@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JawaNet » Home</title>
+    <link rel="stylesheet" href="./.assets/css/home.css" />
+    <link rel="stylesheet" href="./.assets/css/home@media-screen.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-brand">
+        <img src="./.assets/media/webBrand.png" alt="JawaNet Logo" />
+      </div>
+      <div class="hamburger-menu" onclick="Clicked(this)">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul>
+        <li><a href="#" class="in-page">Home</a></li>
+        <li><a href="#">Vote</a></li>
+        <li><a href="#">Rank</a></li>
+        <li><a href="#">Other...</a></li>
+        <li><a href="./page/login.html" class="btn-login">Login</a></li>
+      </ul>
+    </nav>
+
+    <div class="serverStats">
+      <div class="text" id="on">
+        <span id="player-count">1200</span>
+        player sedang bermain! <a href="#">Join server</a>
+      </div>
+      <div class="text" id="off">Server sedang Offline!</div>
+    </div>
+    <main>
+      <div class="welcome">
+        <h1>Selamat Datang di</h1>
+      </div>
+
+      <div
+        class="pendaftaran-staff"
+        data-aos="fade-up"
+        data-aos-duration="1400"
+      >
+        <div class="teks">
+          <h1>Open pendaftaran Staff</h1>
+          <p>
+            Di butuhkan beberapa <b>Staff</b> untuk
+            <b
+              >Menjaga Kedaulatan Server(Admin dan Moderator), Guider(Pemberi
+              Tutorial ke Player)</b
+            >
+            dan <b>Builder.</b>
+          </p>
+          <a href="" class="btn-daftarStaff"
+            >Daftar sekarang
+            <i class="fa-solid fa-arrow-up-right-from-square"></i
+          ></a>
+        </div>
+        <img
+          src="https://img.freepik.com/free-vector/employees-cv-candidates-resume-corporate-workers-students-id-isolate-flat-design-element-job-applications-avatars-personal-information-concept-illustration_335657-1661.jpg?t=st=1711578908~exp=1711582508~hmac=6260f8ec6803d6abf461f1f5e65ba94baedb70ee54683deb8f9e88ed91ad5f71&w=360"
+        />
+      </div>
+
+<<<<<<< HEAD
+      <!-- <div class="introduction">
+        <h2>Selamat Datang di JawaNet!</h2>
+      </div> -->
+=======
+      <div class="serverStats">
+        <h2 id="playerCount">0</h2>
+        <div class="player-online">Player sedang Bermain!</div>
+      </div>
+>>>>>>> 21efe96776878873a43adf570bf4c89db47af742
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./.assets/js/player-count.js"></script>
+    <script src="./.assets/js/navbar.js"></script>
+    <script src="./.assets/js/cookie.js"></script>
+  </body>
+</html>

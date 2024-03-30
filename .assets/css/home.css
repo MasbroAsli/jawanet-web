@@ -1,0 +1,182 @@
+* {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* -- NAVIGATION BAR -- */
+nav {
+  background-color: white;
+  box-shadow: 1px 1.8px 7px #4c4c4c7b;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3rem 25px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  align-items: center;
+}
+
+.nav-brand img {
+  margin-right: 14px;
+  width: 136px;
+}
+
+nav ul {
+  margin-right: 14px;
+  display: flex;
+  gap: 1.3rem;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #4c4c4c;
+  font-weight: 600;
+  padding-bottom: 2.6px;
+  transition: all;
+  transition-duration: 300ms;
+  border-bottom: 3px solid #1eff0000;
+}
+
+nav ul li a:hover {
+  border-bottom: 2.4px solid #17c300;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  transform: scale(73%);
+}
+
+.line1,
+.line2,
+.line3 {
+  width: 35px;
+  height: 5px;
+  background-color: #4c4c4c;
+  border-radius: 15px;
+  margin: 6px;
+  transition: all;
+  transition-duration: 600ms;
+}
+
+.clicked .line1 {
+  transform: translate(0, 11px) rotate(45deg);
+}
+
+.clicked .line2 {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+
+.clicked .line3 {
+  transform: translate(0, -11px) rotate(-45deg);
+}
+
+.btn-login {
+  border: 3px solid #faa300;
+  border-radius: 5px;
+  color: #faa300;
+  padding: 7px 16px 12px 16px;
+  background-color: #faa20000;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.btn-login:hover {
+  border-bottom: 3px solid #faa300 !important;
+  background-color: #faa20070;
+}
+/* -------------------- */
+
+main {
+  margin-top: 6rem;
+  margin-left: 1.5rem;
+}
+/*-- WELCOME --*/
+
+/*-- PENDAFTARAN STAFF --*/
+.pendaftaran-staff {
+  color: #1f2544;
+  margin-left: 2rem;
+  margin-bottom: 12rem;
+  display: flex;
+}
+
+.pendaftaran-staff .teks {
+  margin-top: -18px;
+}
+
+.pendaftaran-staff img {
+  margin-right: 82px;
+  margin-top: -78px;
+}
+
+.pendaftaran-staff h1 {
+  font-size: 40.6px;
+}
+
+.pendaftaran-staff p {
+  margin-top: 10px;
+  font-size: 19px;
+  width: 74%;
+}
+
+.pendaftaran-staff p b {
+  font-weight: 600;
+}
+
+.btn-daftarStaff {
+  background-color: #00cd00;
+  margin-top: 20px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn-daftarStaff i {
+  margin-left: 13px;
+}
+
+.btn-daftarStaff:hover {
+  background-color: #009e00;
+}
+
+/*-- SERVER STATS --*/
+.serverStats {
+  margin-top: 86px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.serverStats .text {
+  color: #7d7d7d;
+}
+
+.serverStats #on a {
+  color: #454545;
+  text-decoration: underline;
+}
+
+.serverStats #on span#player-count {
+  font-weight: bold;
+}
+
+.serverStats #off {
+  display: block;
+  color: red;
+}
